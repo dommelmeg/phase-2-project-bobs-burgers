@@ -29,10 +29,21 @@ function App() {
       <Box overflowX='hidden' w='100%' h='100%'>
         <NavBar />
 
-        <Home />
-        <Burgers />
-        <Characters nineCharacters={nineCharacters} allCharacters={allCharacters} setFavoriteCharacters={setFavoriteCharacters} />
-        <OhMyBabies favoriteCharacters={favoriteCharacters} setFavoriteCharacters={setFavoriteCharacters} />
+        <Switch>
+          <Route path='/burgers'>
+            <Burgers />
+          </Route>
+          <Route path='/characters'>
+            <Characters nineCharacters={nineCharacters} allCharacters={allCharacters} setFavoriteCharacters={setFavoriteCharacters} />
+          </Route>
+          <Route path='/ohmybabies'>
+            <OhMyBabies favoriteCharacters={favoriteCharacters} setFavoriteCharacters={setFavoriteCharacters} />
+          </Route>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+        </Switch>
+
       </Box>
     </ChakraProvider>
   )
