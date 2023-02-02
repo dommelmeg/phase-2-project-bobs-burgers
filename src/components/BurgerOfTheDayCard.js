@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter, Image, Box, Stack, Text, Headin
 import burgerOfDay from '../images/bobs_burgers_burgerOfTheDay.png'
 import BurgerForm from "./BurgerForm";
 
-const BurgerCard = ({ randomBurger }) => {
+const BurgerOfTheDayCard = ({ randomBurger }) => {
 
   return (
     <Box justifyContent='center'>
@@ -34,4 +34,4 @@ const BurgerCard = ({ randomBurger }) => {
   )
 }
 
-export default BurgerCard
+export default BurgerOfTheDayCard

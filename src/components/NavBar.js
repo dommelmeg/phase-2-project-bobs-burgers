@@ -11,7 +11,7 @@ const NavBar = () => {
           <Tab width='lg'>
             <Image src={closedBurger} alt='closed burger logo' width='100px' />
           </Tab>
-          <Tab width='lg'>Burgers of the Day</Tab>
+          <Tab width='lg'>Burgers</Tab>
           <Tab width='lg'>Characters</Tab>
           {/* <Tab>Episoides</Tab>
           <Tab>Stores Next Door</Tab> */}

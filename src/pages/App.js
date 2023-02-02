@@ -5,8 +5,7 @@ import NavBar from "../components/NavBar";
 import Home from "./Home";
 import Characters from "./Characters";
 import OhMyBabies from "./OhMyBabies";
-import BurgersOfTheDay from "./BurgersOfTheDay";
-
+import Burgers from "./Burgers";
 
 function App() {
   const [allCharacters, setAllCharacters] = useState([])
@@ -29,9 +28,9 @@ function App() {
     <ChakraProvider>
       <Box overflowX='hidden' w='100%' h='100%'>
         <NavBar />
-        
+
         <Home />
-        <BurgersOfTheDay />
+        <Burgers />
         <Characters nineCharacters={nineCharacters} allCharacters={allCharacters} setFavoriteCharacters={setFavoriteCharacters} />
         <OhMyBabies favoriteCharacters={favoriteCharacters} setFavoriteCharacters={setFavoriteCharacters} />
       </Box>
