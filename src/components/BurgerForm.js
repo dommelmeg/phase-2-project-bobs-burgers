@@ -8,8 +8,6 @@ const BurgerForm = () => {
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
 
-  
-
   return (
     <>
       <Button 

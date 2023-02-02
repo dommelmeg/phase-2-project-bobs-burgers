@@ -4,7 +4,6 @@ import burgerOfDay from '../images/bobs_burgers_burgerOfTheDay.png'
 import BurgerForm from "./BurgerForm";
 
 const BurgerCard = ({ randomBurger }) => {
-  console.log(randomBurger)
 
   return (
     <Box justifyContent='center'>
@@ -26,7 +25,7 @@ const BurgerCard = ({ randomBurger }) => {
             >
               {randomBurger.price}
             </Text>
-            <Text>Season: {randomBurger.season} | Episode: {randomBurger.episode}</Text>
+            {/* <Text>Season: {randomBurger.season} | Episode: {randomBurger.episode}</Text> */}
           </CardBody>
         </Card>
         <BurgerForm />

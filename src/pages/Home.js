@@ -16,7 +16,7 @@ const Home = () => {
   }, [])
 
   return (
-    <Box w='100%' h='100%' m={5} display='flex' justifyContent='center'>
+    <Box w='100%' h='100%' display='flex' justifyContent='center'>
       <BurgerCard randomBurger={randomBurger} />
     </Box>
   )

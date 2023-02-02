@@ -5,19 +5,19 @@ import { Image, Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/
 
 const NavBar = () => {
   return (
-    <Box display='grid' background='yellow.100'>
-    <Tabs colorScheme='red'>
-      <TabList justifyContent='space-evenly'>
-        <Tab>
-          <Image src={closedBurger} alt='closed burger logo' width='100px' />
-        </Tab>
-        <Tab>Burger of the Day</Tab>
-        <Tab>Episodes</Tab>
-        {/* <Tab>Characters</Tab>
-        <Tab>Stores Next Door</Tab> */}
-        <Tab>Oh My Babies!</Tab>
-      </TabList>
-    </Tabs>
+    <Box background='yellow.100'>
+      <Tabs colorScheme='red' minW='200'>
+        <TabList justifyContent='space-evenly'>
+          <Tab width='lg'>
+            <Image src={closedBurger} alt='closed burger logo' width='100px' />
+          </Tab>
+          <Tab width='lg'>Burgers of the Day</Tab>
+          <Tab width='lg'>Characters</Tab>
+          {/* <Tab>Episoides</Tab>
+          <Tab>Stores Next Door</Tab> */}
+          <Tab width='lg'>Oh My Babies!</Tab>
+        </TabList>
+      </Tabs>
     </Box>
   )
 }

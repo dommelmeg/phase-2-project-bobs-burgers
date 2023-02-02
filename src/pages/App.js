@@ -3,7 +3,7 @@ import { ChakraProvider, Image, Box } from "@chakra-ui/react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Home from "./Home";
-import Episodes from "./Episodes";
+import Characters from "./Characters";
 import OhMyBabies from "./OhMyBabies";
 
 
@@ -11,10 +11,10 @@ function App() {
 
   return (
     <ChakraProvider>
-      <Box w='100%' h='100%'>
+      <Box overflowX='hidden' w='100%' h='100%'>
         <NavBar />
         <Home />
-        <Episodes />
+        <Characters />
         <OhMyBabies />
       </Box>
     </ChakraProvider>
