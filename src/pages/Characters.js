@@ -13,8 +13,8 @@ const Characters = ({ nineCharacters, allCharacters }) => {
         {nineCharacters.map((character) => {
           return (
             <CharacterCard key={character.id} character={character} />
-            )
-          })}
+          )
+        })}
       </SimpleGrid>
     </Stack>
   )

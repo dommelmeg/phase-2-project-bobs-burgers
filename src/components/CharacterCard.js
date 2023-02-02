@@ -19,7 +19,7 @@ const CharacterCard = ({ character }) => {
         />
         <Stack>
           <CardBody>
-            <Stack divider={<StackDivider />} spacing='4'>
+            <Stack divider={<StackDivider borderColor='yellow.500' />} spacing='4'>
               <Box>
                 <Heading size='lg'>{character.name}</Heading>
                 <Text>{character.occupation}</Text>
