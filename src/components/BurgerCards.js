@@ -5,7 +5,7 @@ import { Card, CardHeader, CardBody, CardFooter, Image, Box, Stack, Text, Headin
 const BurgerCards = ({ burger }) => {
   return (
     <Card 
-      size='md'
+      size='lg'
       direction={{ base: 'column', sm: 'row' }}
       overflow='hidden'
       variant='outline'
@@ -14,15 +14,18 @@ const BurgerCards = ({ burger }) => {
       <Stack>
         <CardBody>
           <Stack 
-            divider={<StackDivider borderColor='red.400'/>} 
-            spacing='4'
+            spacing='auto'
           >
-            <Box>
+            <Box height='36'>
               <Heading size='lg'>{burger.name}</Heading>
               <Text size='2xl'>{burger.price}</Text>
-            </Box>
+            </Box >
             <Box>
-              <Text color='red.600'>Season: {burger.season} | Episode: {burger.episode}</Text>
+              <Text 
+                color='red.600'
+              >
+                Season: {burger.season} | Episode: {burger.episode}
+              </Text>
             </Box>
           </Stack>
         </CardBody>
