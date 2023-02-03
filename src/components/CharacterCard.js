@@ -1,7 +1,13 @@
 import React from "react";
 import { Card, CardHeader, CardBody, CardFooter, Image, Box, Stack, Text, Heading, Button, Flex, Avatar, SimpleGrid, StackDivider } from '@chakra-ui/react'
 
-const CharacterCard = ({ character }) => {
+const CharacterCard = ({ character, favoriteCharacters, setFavoriteCharacters }) => {
+  const handleFavoriteBtn = () => {
+    console.log(character)
+    setFavoriteCharacters([...favoriteCharacters, character])
+  }
+
+
   return (
       <Card 
         size='lg'
@@ -31,7 +37,7 @@ const CharacterCard = ({ character }) => {
             </Stack>
           </CardBody>
           <CardFooter>
-            <Button variant='outline' colorScheme='yellow'>
+            <Button onClick={handleFavoriteBtn} variant='outline' colorScheme='yellow'>
               Favorite
             </Button>
           </CardFooter>

@@ -4,19 +4,18 @@ import FavoriteCharacterCard from "../components/FavoriteCharacterCard";
 
 
 const OhMyBabies = ({ favoriteCharacters, setFavoriteCharacters }) => {
-  
 
   return (
     <Stack m={10}>
       <Box>
         <Heading color='pink.500' size='2xl'>Oh My Babies</Heading>
       </Box>
-      <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(350px, 1fr))'>
-        {favoriteCharacters.map((character) => {
+      <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(400px, 1fr))'>
+        {favoriteCharacters.map((favoriteCharacter) => {
           return (
             <FavoriteCharacterCard 
-              key={character.id} 
-              character={character} 
+              key={favoriteCharacter.id} 
+              favoriteCharacter={favoriteCharacter} 
               setFavoriteCharacters={setFavoriteCharacters} 
               favoriteCharacters={favoriteCharacters} 
             />

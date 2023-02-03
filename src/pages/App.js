@@ -34,7 +34,7 @@ function App() {
             <Burgers />
           </Route>
           <Route path='/characters'>
-            <Characters nineCharacters={nineCharacters} allCharacters={allCharacters} setFavoriteCharacters={setFavoriteCharacters} />
+            <Characters nineCharacters={nineCharacters} allCharacters={allCharacters} setFavoriteCharacters={setFavoriteCharacters} favoriteCharacters={favoriteCharacters} />
           </Route>
           <Route path='/ohmybabies'>
             <OhMyBabies favoriteCharacters={favoriteCharacters} setFavoriteCharacters={setFavoriteCharacters} />
