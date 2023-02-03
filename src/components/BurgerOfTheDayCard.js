@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardHeader, CardBody, CardFooter, Image, Box, Stack, Text, Heading, Button } from '@chakra-ui/react'
 import burgerOfDay from '../images/bobs_burgers_burgerOfTheDay.png'
-import BurgerForm from "./BurgerForm";
 
 const BurgerOfTheDayCard = ({ randomBurger }) => {
 
@@ -25,10 +24,8 @@ const BurgerOfTheDayCard = ({ randomBurger }) => {
             >
               {randomBurger.price}
             </Text>
-            {/* <Text>Season: {randomBurger.season} | Episode: {randomBurger.episode}</Text> */}
           </CardBody>
         </Card>
-        <BurgerForm />
       </Stack>
     </Box>
   )

@@ -9,31 +9,37 @@ const NavBar = () => {
     <Box background='yellow.100'>
       <Tabs colorScheme='red' minW='200'>
         <TabList justifyContent='space-evenly'>
+            <Tab width='lg'>
           <NavLink
             to='/'
             exact
           >
-            <Tab width='lg'>
               <Image src={closedBurger} alt='closed burger logo' width='100px' />
-            </Tab>
           </NavLink>
+            </Tab>
+            <Tab width='lg'>
           <NavLink
             to='/burgers'
             exact
           >
-            <Tab width='lg'>Burgers</Tab>
+              Burgers
           </NavLink>
+            </Tab>
+            <Tab width='lg'>
           <NavLink
             to='/characters'
             exact
           >
-            <Tab width='lg'>Characters</Tab>
+              Characters
           </NavLink>
+            </Tab>
+            <Tab width='lg'>
           <NavLink
             to='/ohmybabies'
           >
-            <Tab width='lg'>Oh My Babies!</Tab>
+              Oh My Babies!
           </NavLink>
+            </Tab>
         </TabList>
       </Tabs>
     </Box>

@@ -22,7 +22,7 @@ function App() {
     fetch('https://bobsburgers-api.herokuapp.com/characters/[1,2,3,4,5,6,7,8,9]')
       .then((r) => r.json())
       .then((characters) => setNineCharacters(characters))
-  }, [])
+    }, [])
 
   return (
     <ChakraProvider>

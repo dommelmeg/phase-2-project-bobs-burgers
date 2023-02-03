@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Image, Box } from '@chakra-ui/react'
+import { Image, Box, Stack } from '@chakra-ui/react'
 import BurgerOfTheDayCard from "../components/BurgerOfTheDayCard";
+import BurgerForm from "../components/BurgerForm";
 
 const Home = () => {
   const [randomBurger, setRandomBurger] = useState([])
@@ -17,7 +18,10 @@ const Home = () => {
 
   return (
     <Box w='100%' h='100%' display='flex' justifyContent='center'>
-      <BurgerOfTheDayCard randomBurger={randomBurger} />
+      <Stack>
+        <BurgerOfTheDayCard randomBurger={randomBurger} />
+        <BurgerForm />
+      </Stack>
     </Box>
   )
 }
