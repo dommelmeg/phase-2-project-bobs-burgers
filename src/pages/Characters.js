@@ -41,7 +41,12 @@ const Characters = ({ nineCharacters, allCharacters, setFavoriteCharacters, favo
       <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(400px, 1fr))'>
         {nineCharacters.map((character) => {
           return (
-            <CharacterCard key={character.id} character={character} setFavoriteCharacters={setFavoriteCharacters} favoriteCharacters={favoriteCharacters} />
+            <CharacterCard 
+              key={character.id} 
+              character={character}
+              setFavoriteCharacters={setFavoriteCharacters} 
+              favoriteCharacters={favoriteCharacters}
+            />
           )
         })}
       </SimpleGrid>

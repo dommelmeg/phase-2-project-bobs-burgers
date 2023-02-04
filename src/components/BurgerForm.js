@@ -31,7 +31,10 @@ const BurgerForm = () => {
           <ModalBody pb={6}>
             <FormControl>
               <FormLabel>Name</FormLabel>
-              <Input ref={initialRef} placeholder='Burger of the Day' />
+              <Input 
+                ref={initialRef}
+                placeholder='Burger of the Day' 
+              />
             </FormControl>
 
             <FormControl mt={4}>
@@ -47,11 +50,7 @@ const BurgerForm = () => {
             >
               Submit
             </Button>
-            <Button 
-              onClick={onClose}
-            >
-              Cancel
-            </Button>
+            <Button onClick={onClose}>Cancel</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
