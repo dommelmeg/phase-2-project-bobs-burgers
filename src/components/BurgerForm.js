@@ -1,9 +1,43 @@
-import React from "react";
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Button, FormControl, FormLabel, Input } from '@chakra-ui/react'
+import React, { useState } from "react";
+import { 
+  Modal, 
+  ModalOverlay, 
+  ModalContent, 
+  ModalHeader, 
+  ModalFooter, 
+  ModalBody, 
+  ModalCloseButton, 
+  useDisclosure, 
+  Button, 
+  FormControl, 
+  FormLabel, 
+  Input 
+} from '@chakra-ui/react'
 
 
-const BurgerForm = () => {
+const BurgerForm = ({ allBurgers, setAllBurgers }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [burgerInput, setBurgerInput] = useState('')
+  const [priceInput, setPriceInput] = useState('')
+
+  const handleBurgerChange = (e) => {
+    setBurgerInput(e.target.value)
+  }
+
+  const handlePriceChange = (e) => {
+    setPriceInput(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const formData = {
+      name: burgerInput,
+      price: priceInput,
+
+    }
+    console.log(formData)
+  }
 
   const initialRef = React.useRef(null)
   const finalRef = React.useRef(null)
@@ -33,13 +67,21 @@ const BurgerForm = () => {
               <FormLabel>Name</FormLabel>
               <Input 
                 ref={initialRef}
-                placeholder='Burger of the Day' 
+                placeholder='Burger of the Day'
+                onChange={handleBurgerChange}
+                value={burgerInput}
+                type="text"
               />
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Price</FormLabel>
-              <Input placeholder='$5.95' />
+              <Input 
+                placeholder='$5.95'
+                value={priceInput}
+                onChange={handlePriceChange}
+                type="text"
+              />
             </FormControl>
           </ModalBody>
 
@@ -47,6 +89,7 @@ const BurgerForm = () => {
             <Button 
               colorScheme='red' 
               mr={3}
+              onClick={handleSubmit}
             >
               Submit
             </Button>

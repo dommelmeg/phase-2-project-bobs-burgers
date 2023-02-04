@@ -3,7 +3,7 @@ import { Image, Box, Stack } from '@chakra-ui/react'
 import BurgerOfTheDayCard from "../components/BurgerOfTheDayCard";
 import BurgerForm from "../components/BurgerForm";
 
-const Home = () => {
+const Home = ({ allBurgers, setAllBurgers }) => {
   const [randomBurger, setRandomBurger] = useState([])
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Home = () => {
     <Box w='100%' h='100%' display='flex' justifyContent='center'>
       <Stack>
         <BurgerOfTheDayCard randomBurger={randomBurger} />
-        <BurgerForm />
+        <BurgerForm allBurgers={allBurgers} setAllBurgers={setAllBurgers} />
       </Stack>
     </Box>
   )

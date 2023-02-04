@@ -11,6 +11,7 @@ function App() {
   const [allCharacters, setAllCharacters] = useState([])
   const [nineCharacters, setNineCharacters] = useState([])
   const [favoriteCharacters, setFavoriteCharacters] = useState([])
+  const [allBurgers, setAllBurgers] = useState([])
   
   useEffect(() => {
     fetch('https://bobsburgers-api.herokuapp.com/characters/')
@@ -23,6 +24,12 @@ function App() {
       .then((r) => r.json())
       .then((characters) => setNineCharacters(characters))
     }, [])
+
+  useEffect(() => {
+    fetch(`https://bobsburgers-api.herokuapp.com/burgerOfTheDay/`)
+      .then((r) => r.json())
+      .then((burger) => setAllBurgers(burger))
+  }, [])
 
   return (
     <ChakraProvider>
@@ -40,7 +47,7 @@ function App() {
             <OhMyBabies favoriteCharacters={favoriteCharacters} setFavoriteCharacters={setFavoriteCharacters} />
           </Route>
           <Route exact path='/'>
-            <Home />
+            <Home allBurgers={allBurgers} setAllBurgers={setAllBurgers} />
           </Route>
         </Switch>
 
