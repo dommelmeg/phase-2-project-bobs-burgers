@@ -3,7 +3,7 @@ import CharacterCard from "../components/CharacterCard";
 import { Image, Box, SimpleGrid, Stack, Heading, InputGroup, Input, InputLeftElement } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
 
-const Characters = ({ nineCharacters, allCharacters, setFavoriteCharacters, favoriteCharacters }) => {
+const Characters = ({ characters, allCharacters, setFavoriteCharacters, favoriteCharacters }) => {
   const [inputValue, setInputValue] = useState('')
   const [filteredCharacters, setFilterCharacters] = useState([])
 
@@ -39,7 +39,7 @@ const Characters = ({ nineCharacters, allCharacters, setFavoriteCharacters, favo
       </InputGroup>
 
       <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(400px, 1fr))'>
-        {nineCharacters.map((character) => {
+        {characters.map((character) => {
           return (
             <CharacterCard 
               key={character.id} 

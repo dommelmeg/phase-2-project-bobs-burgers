@@ -7,13 +7,13 @@ import Characters from "./Characters";
 import OhMyBabies from "./OhMyBabies";
 
 function App() {
-  const [nineCharacters, setNineCharacters] = useState([])
+  const [characters, setCharacters] = useState([])
   const [favoriteCharacters, setFavoriteCharacters] = useState([])
   
   useEffect(() => {
     fetch('https://bobsburgers-api.herokuapp.com/characters/[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]')
       .then((r) => r.json())
-      .then((characters) => setNineCharacters(characters))
+      .then((characters) => setCharacters(characters))
     }, [])
 
   return (
@@ -24,7 +24,7 @@ function App() {
         <Switch>
           <Route path='/characters'>
             <Characters 
-              nineCharacters={nineCharacters} 
+              characters={characters} 
               setFavoriteCharacters={setFavoriteCharacters} 
               favoriteCharacters={favoriteCharacters} />
           </Route>
