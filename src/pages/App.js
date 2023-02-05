@@ -1,35 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { ChakraProvider, Image, Box } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Home from "./Home";
 import Characters from "./Characters";
 import OhMyBabies from "./OhMyBabies";
-import Burgers from "./Burgers";
 
 function App() {
-  const [allCharacters, setAllCharacters] = useState([])
   const [nineCharacters, setNineCharacters] = useState([])
   const [favoriteCharacters, setFavoriteCharacters] = useState([])
-  const [allBurgers, setAllBurgers] = useState([])
   
   useEffect(() => {
-    fetch('https://bobsburgers-api.herokuapp.com/characters/')
-      .then((r) => r.json())
-      .then((characters) => setAllCharacters(characters))
-  }, [])
-
-  useEffect(() => {
-    fetch('https://bobsburgers-api.herokuapp.com/characters/[1,2,3,4,5,6,7,8,9]')
+    fetch('https://bobsburgers-api.herokuapp.com/characters/[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]')
       .then((r) => r.json())
       .then((characters) => setNineCharacters(characters))
     }, [])
-
-  useEffect(() => {
-    fetch(`https://bobsburgers-api.herokuapp.com/burgerOfTheDay/`)
-      .then((r) => r.json())
-      .then((burger) => setAllBurgers(burger))
-  }, [])
 
   return (
     <ChakraProvider>
@@ -37,17 +22,19 @@ function App() {
         <NavBar />
 
         <Switch>
-          <Route path='/burgers'>
-            <Burgers />
-          </Route>
           <Route path='/characters'>
-            <Characters nineCharacters={nineCharacters} allCharacters={allCharacters} setFavoriteCharacters={setFavoriteCharacters} favoriteCharacters={favoriteCharacters} />
+            <Characters 
+              nineCharacters={nineCharacters} 
+              setFavoriteCharacters={setFavoriteCharacters} 
+              favoriteCharacters={favoriteCharacters} />
           </Route>
           <Route path='/ohmybabies'>
-            <OhMyBabies favoriteCharacters={favoriteCharacters} setFavoriteCharacters={setFavoriteCharacters} />
+            <OhMyBabies 
+              favoriteCharacters={favoriteCharacters} 
+              setFavoriteCharacters={setFavoriteCharacters} />
           </Route>
           <Route exact path='/'>
-            <Home allBurgers={allBurgers} setAllBurgers={setAllBurgers} />
+            <Home />
           </Route>
         </Switch>
 

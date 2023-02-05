@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardBody, CardFooter, Image, Box, Stack, Text, Heading, Button } from '@chakra-ui/react'
+import { Card, CardBody, Image, Box, Stack, Text, Heading } from '@chakra-ui/react'
 import burgerOfDay from '../images/bobs_burgers_burgerOfTheDay.png'
 
 const BurgerOfTheDayCard = ({ randomBurger }) => {

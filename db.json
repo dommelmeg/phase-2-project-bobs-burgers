@@ -1,0 +1,43 @@
+{
+  "burgers": [
+    {
+      "id": 1,
+      "name": "\"New Bacon-ings\" - Comes with Bacon",
+      "price": "$5.95",
+      "season": 1,
+      "episode": 1,
+      "episodeUrl": "https://bobsburgers-api.herokuapp.com/episodes/1",
+      "url": "https://bobsburgers-api.herokuapp.com/burgerOfTheDay/1"
+    },
+    {
+      "name": "Gouda to Meat You",
+      "price": "$5.95",
+      "id": 2
+    },
+    {
+      "name": "Meat the Chompers",
+      "price": "$7.99",
+      "id": 3
+    },
+    {
+      "name": "This is a test",
+      "price": "FREE",
+      "id": 4
+    },
+    {
+      "name": "another test",
+      "price": "FREE",
+      "id": 5
+    },
+    {
+      "name": "test #3",
+      "price": "$2",
+      "id": 6
+    },
+    {
+      "name": "something saucy",
+      "price": "$99",
+      "id": 7
+    }
+  ]
+}

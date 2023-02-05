@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 
 
-const BurgerForm = ({ allBurgers, setAllBurgers }) => {
+const BurgerForm = ({ setBurgers, burgers}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [burgerInput, setBurgerInput] = useState('')
   const [priceInput, setPriceInput] = useState('')
@@ -34,9 +34,19 @@ const BurgerForm = ({ allBurgers, setAllBurgers }) => {
     const formData = {
       name: burgerInput,
       price: priceInput,
-
     }
-    console.log(formData)
+
+    fetch('http://localhost:3001/burgers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then((r) => r.json())
+      .then((burger) => setBurgers([...burgers, burger]))
+
+    onClose()
   }
 
   const initialRef = React.useRef(null)
@@ -69,7 +79,7 @@ const BurgerForm = ({ allBurgers, setAllBurgers }) => {
                 ref={initialRef}
                 placeholder='Burger of the Day'
                 onChange={handleBurgerChange}
-                value={burgerInput}
+                // value={burgerInput}
                 type="text"
               />
             </FormControl>
@@ -78,7 +88,7 @@ const BurgerForm = ({ allBurgers, setAllBurgers }) => {
               <FormLabel>Price</FormLabel>
               <Input 
                 placeholder='$5.95'
-                value={priceInput}
+                // value={priceInput}
                 onChange={handlePriceChange}
                 type="text"
               />

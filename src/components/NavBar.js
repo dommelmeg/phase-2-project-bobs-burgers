@@ -1,7 +1,7 @@
 import React from "react";
 import closedBurger from '../images/closedBurgerLogo.png'
 import openBurger from '../images/openBurgerLogo.png'
-import { Image, Box, Tabs, TabList, TabPanels, Tab, TabPanel, Link } from '@chakra-ui/react'
+import { Image, Box, Tabs, TabList, Tab } from '@chakra-ui/react'
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
@@ -14,15 +14,7 @@ const NavBar = () => {
             to='/'
             exact
           >
-              <Image src={closedBurger} alt='closed burger logo' width='100px' />
-          </NavLink>
-            </Tab>
-            <Tab width='lg'>
-          <NavLink
-            to='/burgers'
-            exact
-          >
-              Burgers
+            <Image src={closedBurger} alt='closed burger logo' width='100px' />
           </NavLink>
             </Tab>
             <Tab width='lg'>

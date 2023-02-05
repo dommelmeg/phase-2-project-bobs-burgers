@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Image, Box, Stack } from '@chakra-ui/react'
+import { Box, Stack } from '@chakra-ui/react'
 import BurgerOfTheDayCard from "../components/BurgerOfTheDayCard";
 import BurgerForm from "../components/BurgerForm";
+import Burgers from "../components/Burgers";
 
-const Home = ({ allBurgers, setAllBurgers }) => {
+const Home = () => {
   const [randomBurger, setRandomBurger] = useState([])
+  const [burgers, setBurgers] = useState([])
 
   useEffect(() => {
     const min = Math.ceil(1);
@@ -16,13 +18,24 @@ const Home = ({ allBurgers, setAllBurgers }) => {
       .then((burger) => setRandomBurger(burger))
   }, [])
 
+  useEffect(() => {
+    fetch('http://localhost:3001/burgers')
+      .then((r) => r.json())
+      .then((burgers) => setBurgers(burgers))
+  },[])
+
   return (
-    <Box w='100%' h='100%' display='flex' justifyContent='center'>
-      <Stack>
-        <BurgerOfTheDayCard randomBurger={randomBurger} />
-        <BurgerForm allBurgers={allBurgers} setAllBurgers={setAllBurgers} />
-      </Stack>
-    </Box>
+    <Stack>
+      <Box w='100%' h='100%' display='flex' justifyContent='center'>
+        <Stack>
+          <BurgerOfTheDayCard randomBurger={randomBurger} />
+          <BurgerForm setBurgers={setBurgers} burgers={burgers} />
+        </Stack>
+      </Box>
+      <Box>
+        <Burgers burgers={burgers} />
+      </Box>
+    </Stack>
   )
 }
 
