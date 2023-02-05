@@ -1,15 +1,15 @@
 import React from "react";
-import { Card, CardBody, Box, Stack, Text, Heading } from '@chakra-ui/react'
+import { Card, CardBody, Box, Stack, Text, Heading, Button, CardFooter } from '@chakra-ui/react'
 
 
 const BurgerCards = ({ burger }) => {
   return (
     <Card 
-      size='lg'
+      size='sm'
       direction={{ base: 'column', sm: 'row' }}
       overflow='hidden'
       variant='outline'
-      background='blackAlpha.700'
+      background='red.50'
     >
       <Stack>
         <CardBody>
@@ -17,8 +17,8 @@ const BurgerCards = ({ burger }) => {
             spacing='auto'
           >
             <Box >
-              <Heading color='white' size='lg'>{burger.name}</Heading>
-              <Text color='white' size='2xl'>{burger.price}</Text>
+              <Heading size='lg'>{burger.name}</Heading>
+              <Text size='2xl'>{burger.price}</Text>
             </Box >
           </Stack>
         </CardBody>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardBody, CardFooter, Image, Box, Stack, Text, Heading, Button, Flex, Avatar, SimpleGrid, StackDivider } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter, Image, Box, Stack, Text, Heading, Button, Link, StackDivider } from '@chakra-ui/react'
 
 
 const FavoriteCharacterCard = ({ favoriteCharacter, setFavoriteCharacters, favoriteCharacters }) => {
@@ -31,15 +31,21 @@ const FavoriteCharacterCard = ({ favoriteCharacter, setFavoriteCharacters, favor
               <Text>{favoriteCharacter.occupation}</Text>
             </Box>
             <Box>
+              <Text><b>Gender:</b> {favoriteCharacter.gender}</Text>
+              <Text><b>Hair Color:</b>{favoriteCharacter.hairColor}</Text>
+            </Box>
+            <Box>
               <Heading size='sm'>Voice Actor:</Heading>
               <Text>{favoriteCharacter.voicedBy}</Text>
             </Box>
           </Stack>
         </CardBody>
         <CardFooter>
-          <Button onClick={handleUnfavoriteBtn} variant='outline' colorScheme='pink'>
-            Unfavorite
-          </Button>
+          <Stack>
+            <Button onClick={handleUnfavoriteBtn} variant='outline' colorScheme='pink'>
+              Unfavorite
+            </Button>
+          </Stack>
         </CardFooter>
       </Stack>
     </Card>

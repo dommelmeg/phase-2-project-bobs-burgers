@@ -3,7 +3,6 @@ import { Box, SimpleGrid, Stack, Heading } from '@chakra-ui/react'
 import BurgerCards from "./BurgerCards";
 
 const Burgers = ({ burgers }) => {
-
   return (
     <Stack m={10}>
       <Box m={2}>
