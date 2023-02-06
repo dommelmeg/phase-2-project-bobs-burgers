@@ -1,13 +1,8 @@
 import React from "react";
-import { Card, CardBody, CardFooter, Image, Box, Stack, Text, Heading, Button, StackDivider } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter, Image, Box, Stack, Text, Heading, StackDivider } from '@chakra-ui/react'
 import FavoriteBtn from "./FavoriteBtn";
 
 const CharacterCard = ({ character, favoriteCharacters, setFavoriteCharacters }) => {
-  const handleFavoriteBtn = () => {
-    console.log(character)
-    setFavoriteCharacters([...favoriteCharacters, character])
-  }
-
   return (
       <Card 
         size='lg'

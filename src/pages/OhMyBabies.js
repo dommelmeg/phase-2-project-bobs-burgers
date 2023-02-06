@@ -1,10 +1,9 @@
 import React from "react";
-import { Image, Box, SimpleGrid, Stack, Heading } from '@chakra-ui/react'
-import FavoriteCharacterCard from "../components/FavoriteCharacterCard";
+import { Box, SimpleGrid, Stack, Heading } from '@chakra-ui/react'
 import CharacterCard from "../components/CharacterCard";
 
 
-const OhMyBabies = ({ favoriteCharacters, setFavoriteCharacters, isFavorite, setIsFavorite }) => {
+const OhMyBabies = ({ favoriteCharacters, setFavoriteCharacters }) => {
 
   return (
     <Stack m={10}>
@@ -19,8 +18,6 @@ const OhMyBabies = ({ favoriteCharacters, setFavoriteCharacters, isFavorite, set
               character={favoriteCharacter} 
               setFavoriteCharacters={setFavoriteCharacters} 
               favoriteCharacters={favoriteCharacters} 
-              isFavorite={isFavorite}
-              setIsFavorite={setIsFavorite}
             />
           )
         })}

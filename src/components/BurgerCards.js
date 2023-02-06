@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, Box, Stack, Text, Heading, Button, CardFooter } from '@chakra-ui/react'
+import { Card, CardBody, Box, Stack, Text, Heading } from '@chakra-ui/react'
 
 
 const BurgerCards = ({ burger }) => {
