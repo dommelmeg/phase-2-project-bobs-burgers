@@ -37,7 +37,11 @@ const CharacterCard = ({ character, favoriteCharacters, setFavoriteCharacters })
             </Stack>
           </CardBody>
           <CardFooter>
-            <FavoriteBtn character={character} setFavoriteCharacters={setFavoriteCharacters} favoriteCharacters={favoriteCharacters} />
+            <FavoriteBtn
+              character={character}
+              setFavoriteCharacters={setFavoriteCharacters}
+              favoriteCharacters={favoriteCharacters}
+            />
           </CardFooter>
         </Stack>
       </Card>

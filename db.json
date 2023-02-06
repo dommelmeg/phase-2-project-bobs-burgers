@@ -4,6 +4,11 @@
       "name": "\"New Bacon-ings\" - Comes with Bacon",
       "price": "$5.95",
       "id": 1
+    },
+    {
+      "name": "Gouda to Meat You",
+      "price": "$5.95",
+      "id": 2
     }
   ]
 }

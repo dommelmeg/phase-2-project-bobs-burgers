@@ -9,7 +9,6 @@ import OhMyBabies from "./OhMyBabies";
 function App() {
   const [characters, setCharacters] = useState([])
   const [favoriteCharacters, setFavoriteCharacters] = useState([])
-  const [isFavorite, setIsFavorite] = useState(false)
   
   useEffect(() => {
     fetch('https://bobsburgers-api.herokuapp.com/characters/[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]')
@@ -28,16 +27,12 @@ function App() {
               characters={characters} 
               setFavoriteCharacters={setFavoriteCharacters} 
               favoriteCharacters={favoriteCharacters} 
-              isFavorite={isFavorite}
-              setIsFavorite={setIsFavorite}
             />
           </Route>
           <Route path='/ohmybabies'>
             <OhMyBabies 
               favoriteCharacters={favoriteCharacters} 
               setFavoriteCharacters={setFavoriteCharacters} 
-              isFavorite={isFavorite}
-              setIsFavorite={setIsFavorite}
             />
           </Route>
           <Route exact path='/'>

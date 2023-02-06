@@ -1,23 +1,26 @@
 import React from "react";
 import { Button } from '@chakra-ui/react'
 
-const FavoriteBtn = ({ isFavorite, setIsFavorite, character, favoriteCharacter, setFavoriteCharacters, favoriteCharacters }) => {
+const FavoriteBtn = ({ character, setFavoriteCharacters, favoriteCharacters }) => {
+  const isFavorite = favoriteCharacters.includes(character)
+
   const handleFavoriteBtn = () => {
-    if (isFavorite === false) {
+    if (!isFavorite) {
       setFavoriteCharacters([...favoriteCharacters, character])
     } else {
-      const filterFavorites = favoriteCharacters.filter((character) => character.id !== favoriteCharacter.id)
+      const filterFavorites = favoriteCharacters.filter((favoriteCharacter) => favoriteCharacter !== character)
       setFavoriteCharacters(filterFavorites)
     }
-    
   }
 
   return (
     <Button
       variant={isFavorite ? 'solid' : 'outline'}
-      colorScheme={isFavorite ? 'pink' : 'yellow'}
+      colorScheme='yellow'
       onClick={handleFavoriteBtn}  
-    >{isFavorite ? 'Unfavorite' : 'Favorite'}</Button>
+    >
+      {isFavorite ? 'Unfavorite' : 'Favorite'}
+    </Button>
   )
 }
 

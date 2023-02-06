@@ -3,7 +3,7 @@ import { Card, CardBody, CardFooter, Image, Box, Stack, Text, Heading, Button, L
 import FavoriteBtn from "./FavoriteBtn";
 
 
-const FavoriteCharacterCard = ({ favoriteCharacter, setFavoriteCharacters, favoriteCharacters, isFavorite, setIsFavorite }) => {
+const FavoriteCharacterCard = ({ favoriteCharacter, setFavoriteCharacters, favoriteCharacters }) => {
   const handleUnfavoriteBtn = () => {
     const filterFavorites = favoriteCharacters.filter((character) => character.id !== favoriteCharacter.id)
     setFavoriteCharacters(filterFavorites)
@@ -43,7 +43,11 @@ const FavoriteCharacterCard = ({ favoriteCharacter, setFavoriteCharacters, favor
         </CardBody>
         <CardFooter>
           <Stack>
-            <FavoriteBtn favoriteCharacter={favoriteCharacter} setFavoriteCharacters={setFavoriteCharacters} favoriteCharacters={favoriteCharacters} />
+            <FavoriteBtn 
+              favoriteCharacter={favoriteCharacter} 
+              setFavoriteCharacters={setFavoriteCharacters} 
+              favoriteCharacters={favoriteCharacters}
+          />
           </Stack>
         </CardFooter>
       </Stack>
