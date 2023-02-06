@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, CardBody, CardFooter, Image, Box, Stack, Text, Heading, Button, Link, StackDivider } from '@chakra-ui/react'
+import FavoriteBtn from "./FavoriteBtn";
 
 
-const FavoriteCharacterCard = ({ favoriteCharacter, setFavoriteCharacters, favoriteCharacters }) => {
+const FavoriteCharacterCard = ({ favoriteCharacter, setFavoriteCharacters, favoriteCharacters, isFavorite, setIsFavorite }) => {
   const handleUnfavoriteBtn = () => {
     const filterFavorites = favoriteCharacters.filter((character) => character.id !== favoriteCharacter.id)
     setFavoriteCharacters(filterFavorites)
@@ -42,9 +43,7 @@ const FavoriteCharacterCard = ({ favoriteCharacter, setFavoriteCharacters, favor
         </CardBody>
         <CardFooter>
           <Stack>
-            <Button onClick={handleUnfavoriteBtn} variant='outline' colorScheme='pink'>
-              Unfavorite
-            </Button>
+            <FavoriteBtn favoriteCharacter={favoriteCharacter} setFavoriteCharacters={setFavoriteCharacters} favoriteCharacters={favoriteCharacters} />
           </Stack>
         </CardFooter>
       </Stack>
