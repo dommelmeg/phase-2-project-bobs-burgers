@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Box, SimpleGrid, Stack, Heading } from '@chakra-ui/react'
 import CharacterCard from "../components/CharacterCard";
+import { FavoriteCharacterContext } from "../context/favoriteCharacters";
 
+const OhMyBabies = () => {
+  const { favoriteCharacters } = useContext(FavoriteCharacterContext)
 
-const OhMyBabies = ({ favoriteCharacters, setFavoriteCharacters }) => {
   return (
     <Stack m={10}>
       <Box>
@@ -13,10 +15,8 @@ const OhMyBabies = ({ favoriteCharacters, setFavoriteCharacters }) => {
         {favoriteCharacters.map((favoriteCharacter) => {
           return (
             <CharacterCard 
-              key={favoriteCharacter.name} 
+              key={favoriteCharacter.id} 
               character={favoriteCharacter} 
-              setFavoriteCharacters={setFavoriteCharacters} 
-              favoriteCharacters={favoriteCharacters} 
             />
           )
         })}

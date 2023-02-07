@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import CharacterCard from "../components/CharacterCard";
 import { Box, SimpleGrid, Stack, Heading } from '@chakra-ui/react'
 
-const Characters = ({ characters, setFavoriteCharacters, favoriteCharacters }) => {
+const Characters = () => {
+  const [characters, setCharacters] = useState([])
+
+  useEffect(() => {
+    fetch('https://bobsburgers-api.herokuapp.com/characters/[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]')
+      .then((r) => r.json())
+      .then((characters) => setCharacters(characters))
+    }, [])
+
   return (
     <Stack m={10}>
       <Box>
@@ -15,8 +23,6 @@ const Characters = ({ characters, setFavoriteCharacters, favoriteCharacters }) =
             <CharacterCard 
               key={character.id} 
               character={character}
-              setFavoriteCharacters={setFavoriteCharacters} 
-              favoriteCharacters={favoriteCharacters}
             />
           )
         })}

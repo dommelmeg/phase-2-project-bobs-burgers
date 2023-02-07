@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Card, CardBody, CardFooter, Image, Box, Stack, Text, Heading, StackDivider } from '@chakra-ui/react'
 import FavoriteBtn from "./FavoriteBtn";
+import { FavoriteCharacterContext } from "../context/favoriteCharacters";
 
-const CharacterCard = ({ character, favoriteCharacters, setFavoriteCharacters }) => {
+const CharacterCard = ({ character }) => {
+  const { favoriteCharacters, setFavoriteCharacters } = useContext(FavoriteCharacterContext)
+
   return (
       <Card 
         size='lg'
@@ -32,11 +35,7 @@ const CharacterCard = ({ character, favoriteCharacters, setFavoriteCharacters })
             </Stack>
           </CardBody>
           <CardFooter>
-            <FavoriteBtn
-              character={character}
-              setFavoriteCharacters={setFavoriteCharacters}
-              favoriteCharacters={favoriteCharacters}
-            />
+            <FavoriteBtn character={character} />
           </CardFooter>
         </Stack>
       </Card>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from '@chakra-ui/react'
+import { FavoriteCharacterContext } from "../context/favoriteCharacters";
 
-const FavoriteBtn = ({ character, setFavoriteCharacters, favoriteCharacters }) => {
+const FavoriteBtn = ({ character }) => {
+  const { favoriteCharacters, setFavoriteCharacters } = useContext(FavoriteCharacterContext)
   const isFavorite = favoriteCharacters.includes(character)
 
   const handleFavoriteBtn = () => {
