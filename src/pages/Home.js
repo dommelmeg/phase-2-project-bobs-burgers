@@ -26,10 +26,18 @@ const Home = () => {
 
   return (
     <Stack>
-      <Box w='100%' h='100%' display='flex' justifyContent='center'>
+      <Box 
+        w='100%' 
+        h='100%' 
+        display='flex' 
+        justifyContent='center'
+      >
         <Stack>
           <BurgerOfTheDayCard randomBurger={randomBurger} />
-          <BurgerForm setBurgers={setBurgers} burgers={burgers} />
+          <BurgerForm
+            setBurgers={setBurgers} 
+            burgers={burgers}
+          />
         </Stack>
       </Box>
       <Box>

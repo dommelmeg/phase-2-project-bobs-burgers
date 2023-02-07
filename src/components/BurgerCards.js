@@ -11,18 +11,16 @@ const BurgerCards = ({ burger }) => {
       variant='outline'
       background='red.50'
     >
-      <Stack>
-        <CardBody>
-          <Stack 
-            spacing='auto'
-          >
-            <Box >
-              <Heading size='lg'>{burger.name}</Heading>
-              <Text size='2xl'>{burger.price}</Text>
-            </Box >
-          </Stack>
-        </CardBody>
-      </Stack>
+      <CardBody>
+        <Stack 
+          spacing='auto'
+        >
+          <Box >
+            <Heading size='lg'>{burger.name}</Heading>
+            <Text size='2xl'>{burger.price}</Text>
+          </Box >
+        </Stack>
+      </CardBody>
     </Card>
   )
 }

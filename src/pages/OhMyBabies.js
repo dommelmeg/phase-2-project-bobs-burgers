@@ -4,7 +4,6 @@ import CharacterCard from "../components/CharacterCard";
 
 
 const OhMyBabies = ({ favoriteCharacters, setFavoriteCharacters }) => {
-
   return (
     <Stack m={10}>
       <Box>
