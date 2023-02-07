@@ -5,18 +5,7 @@ import BurgerForm from "../components/BurgerForm";
 import Burgers from "../components/Burgers";
 
 const Home = () => {
-  const [randomBurger, setRandomBurger] = useState([])
   const [burgers, setBurgers] = useState([])
-
-  useEffect(() => {
-    const min = Math.ceil(1);
-    const max = Math.floor(333);
-    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min)
-    
-    fetch(`https://bobsburgers-api.herokuapp.com/burgerOfTheDay/${randomNumber}`)
-      .then((r) => r.json())
-      .then((burger) => setRandomBurger(burger))
-  }, [])
 
   useEffect(() => {
     fetch('http://localhost:3001/burgers')
@@ -33,7 +22,7 @@ const Home = () => {
         justifyContent='center'
       >
         <Stack>
-          <BurgerOfTheDayCard randomBurger={randomBurger} />
+          <BurgerOfTheDayCard />
           <BurgerForm
             setBurgers={setBurgers} 
             burgers={burgers}

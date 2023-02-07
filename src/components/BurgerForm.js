@@ -79,7 +79,6 @@ const BurgerForm = ({ setBurgers, burgers}) => {
                 ref={initialRef}
                 placeholder='Burger of the Day'
                 onChange={handleBurgerChange}
-                // value={burgerInput}
                 type="text"
               />
             </FormControl>
@@ -88,7 +87,6 @@ const BurgerForm = ({ setBurgers, burgers}) => {
               <FormLabel>Price</FormLabel>
               <Input 
                 placeholder='$5.95'
-                // value={priceInput}
                 onChange={handlePriceChange}
                 type="text"
               />

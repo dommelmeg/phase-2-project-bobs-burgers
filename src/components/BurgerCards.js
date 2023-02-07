@@ -15,10 +15,10 @@ const BurgerCards = ({ burger }) => {
         <Stack 
           spacing='auto'
         >
-          <Box >
+          <Box>
             <Heading size='lg'>{burger.name}</Heading>
             <Text size='2xl'>{burger.price}</Text>
-          </Box >
+          </Box>
         </Stack>
       </CardBody>
     </Card>
