@@ -1,37 +1,28 @@
 import React from "react";
 import closedBurger from '../images/closedBurgerLogo.png'
 import openBurger from '../images/openBurgerLogo.png'
-import { Image, Box, Tabs, TabList, Tab } from '@chakra-ui/react'
-import { NavLink } from "react-router-dom";
+import { Image, Box, Tabs, TabList } from '@chakra-ui/react'
+import { useLocation } from "react-router-dom";
+import NavItem from "./NavItem";
 
 const NavBar = () => {
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+
   return (
     <Box background='yellow.100'>
-      <Tabs colorScheme='red' minW='200'>
+      <Tabs colorScheme='red'>
         <TabList justifyContent='space-evenly'>
-            <Tab width='lg'>
-          <NavLink
-            to='/'
-            exact
-          >
-            <Image src={closedBurger} alt='closed burger logo' width='100px' />
-          </NavLink>
-            </Tab>
-            <Tab width='lg'>
-          <NavLink
-            to='/characters'
-            exact
-          >
-              Characters
-          </NavLink>
-            </Tab>
-            <Tab width='lg'>
-          <NavLink
-            to='/ohmybabies'
-          >
-              Oh My Babies!
-          </NavLink>
-            </Tab>
+          <NavItem to='/'>
+            <Image
+              src={isHome ? openBurger : closedBurger}
+              alt='closed burger logo'
+              height='80px'
+              padding='2'
+            />
+          </NavItem>
+          <NavItem to='/characters'>Characters</NavItem>
+          <NavItem to='/ohmybabies'>Oh My Babies!</NavItem>
         </TabList>
       </Tabs>
     </Box>
