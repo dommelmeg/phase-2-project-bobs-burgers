@@ -12,7 +12,6 @@ function App() {
     <ChakraProvider>
       <Box overflowX='hidden' w='100%' h='100%'>
         <NavBar />
-
         <FavoriteCharacterProvider>
           <Switch>
             <Route path='/characters'>
@@ -26,7 +25,6 @@ function App() {
             </Route>
           </Switch>
         </FavoriteCharacterProvider>
-
       </Box>
     </ChakraProvider>
   )
