@@ -6,24 +6,14 @@
       "id": 1
     },
     {
-      "name": "Gouda",
+      "name": "Gouda to Meat You",
       "price": "$5.95",
       "id": 2
     },
     {
-      "name": "another test",
-      "price": "4",
+      "name": "Meat the Chompers",
+      "price": "$7.99",
       "id": 3
-    },
-    {
-      "name": "Gouda to meat you",
-      "price": "3",
-      "id": 4
-    },
-    {
-      "name": "another one",
-      "price": "2",
-      "id": 5
     }
   ]
 }
