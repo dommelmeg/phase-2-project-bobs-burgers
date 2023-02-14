@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Card, CardBody, CardFooter, Image, Box, Stack, Text, Heading, StackDivider } from '@chakra-ui/react'
 import FavoriteBtn from "./FavoriteBtn";
 

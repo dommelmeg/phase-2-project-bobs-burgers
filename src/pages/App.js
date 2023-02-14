@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "../components/NavBar";

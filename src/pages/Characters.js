@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import CharacterCard from "../components/CharacterCard";
 import { Box, SimpleGrid, Stack, Heading } from '@chakra-ui/react'
 
