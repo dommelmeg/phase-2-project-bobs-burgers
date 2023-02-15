@@ -46,6 +46,8 @@ const BurgerForm = ({ setBurgers, burgers}) => {
       .then((r) => r.json())
       .then((burger) => setBurgers([...burgers, burger]))
 
+    setBurgerInput('')
+    setPriceInput('')
     onClose()
   }
 
@@ -80,6 +82,7 @@ const BurgerForm = ({ setBurgers, burgers}) => {
                 placeholder='Burger of the Day'
                 onChange={handleBurgerChange}
                 type="text"
+                value={burgerInput}
               />
             </FormControl>
 
@@ -89,6 +92,7 @@ const BurgerForm = ({ setBurgers, burgers}) => {
                 placeholder='$5.95'
                 onChange={handlePriceChange}
                 type="text"
+                value={priceInput}
               />
             </FormControl>
           </ModalBody>
