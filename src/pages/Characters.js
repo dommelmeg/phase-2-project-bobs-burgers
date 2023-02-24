@@ -22,7 +22,7 @@ const Characters = () => {
     <Stack m={10}>
       <Box>
         <Heading color='yellow.500' size='2xl' paddingBottom='10'>Characters</Heading>
-        <Input placeholder='Character Name' focusBorderColor='yellow.500' onChange={handleInputChange} />
+        <Input placeholder='Character Name' focusBorderColor='yellow.500' onChange={handleInputChange} value={inputValue} />
       </Box>
 
       <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(400px, 1fr))'>
